@@ -61,6 +61,7 @@ class _LoginState extends State<Login> {
                         if (value==null || value.isEmpty) {
                           return "Email is required";
                         }
+                        return null;
                       },
                     ),
                   SizedBox(height: 24),
@@ -79,6 +80,7 @@ class _LoginState extends State<Login> {
                       if (value==null || value.isEmpty) {
                         return "Password is required";
                       }
+                      return null;
                     }
                   ),
                   SizedBox(height: 24),
@@ -86,7 +88,7 @@ class _LoginState extends State<Login> {
                 ),
                   ElevatedButton(onPressed: () {
                     if (!formKey.currentState!.validate()) {
-                      return null;
+                      return;
                     } else {
                       Navigator.pushReplacement(
                         context, 

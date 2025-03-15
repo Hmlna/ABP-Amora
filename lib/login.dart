@@ -141,7 +141,7 @@ class _LoginState extends State<Login> {
                             )
                           ]
                         ),
-                        child: SvgPicture.asset('facebook.svg'),
+                        child: SvgPicture.asset('assets/facebook.svg'),
                       ),
                       SizedBox(width: 16),
                       Container(
@@ -158,7 +158,7 @@ class _LoginState extends State<Login> {
                             )
                           ]
                         ),
-                        child: SvgPicture.asset('google.svg'),
+                        child: SvgPicture.asset('assets/google.svg'),
                       ),
                       SizedBox(width: 16),
                       Container(
@@ -175,13 +175,22 @@ class _LoginState extends State<Login> {
                             )
                           ]
                         ),
-                        child: SvgPicture.asset('apple.svg'),
+                        child: SvgPicture.asset('assets/apple.svg'),
                       ),
                     ],
                   ),
                   SizedBox(height: 24),
-                  Center(child: Text('Don’t have an Account? Sign Up', style: TextStyle(
-                    fontSize: 10
+                  Center(
+                    child: RichText(
+                      text: TextSpan(
+                        style: TextStyle(fontSize: 10, color: Colors.black),
+                        children: [
+                          TextSpan(text: "Don’t have an Account? "),
+                          TextSpan(
+                            text: "Sign Up",
+                            style: TextStyle(color: Colors.green),
+                          ),
+                        ],
                       ),
                     ),
                   )

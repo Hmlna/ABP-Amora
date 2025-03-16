@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:slicing_amora/home.dart';
 import 'package:slicing_amora/profile.dart';
 import 'package:slicing_amora/search.dart';
@@ -20,6 +19,7 @@ class _MyWidgetState extends State<MainPage> {
     return Scaffold(body: pages[currentPage],
     bottomNavigationBar: BottomNavigationBar(
       selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+      selectedItemColor: Color(0xff3EC492),
       unselectedLabelStyle: TextStyle(fontWeight: FontWeight.normal),
       currentIndex: currentPage,
       onTap: (value) {
@@ -28,9 +28,10 @@ class _MyWidgetState extends State<MainPage> {
         });
       },
       items: [
-        BottomNavigationBarItem(icon: SvgPicture.asset("assets/home_icon.svg"), label: "Home"),
-        BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
-        BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+        // BottomNavigationBarItem(icon: SvgPicture.asset("assets/home_icon.svg"), label: currentPage == 0 ? "." : ""),
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: currentPage == 0 ? "." : ""),
+        BottomNavigationBarItem(icon: Icon(Icons.search), label: currentPage == 1 ? "." : ""),
+        BottomNavigationBarItem(icon: Icon(Icons.person), label: currentPage == 2 ? "." : ""),
         ],
       ),
     );

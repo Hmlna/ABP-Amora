@@ -34,7 +34,7 @@ class Home extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(100),
                           image: const DecorationImage(
-                            image: AssetImage("assets/profile_pic.jpg"),
+                            image: AssetImage("assets/avatar.png"),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -85,9 +85,7 @@ class Home extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 24,
-                ),
+                SizedBox(height: 24),
                 Container(
                   margin: EdgeInsets.only(top: 24),
                   decoration: BoxDecoration(
@@ -148,29 +146,21 @@ class Home extends StatelessWidget {
                                         ),
                                       ],
                                     ),
-                                    SizedBox(
-                                      height: 4,
-                                    ),
+                                    SizedBox(height: 4),
                                     Row(
                                       children: [
                                         Image.asset(
                                           'assets/bottle.png',
                                           width: 14,
                                         ),
-                                        SizedBox(
-                                          width: 8,
-                                        ),
+                                        SizedBox(width: 8),
                                         Text('Sweet Voyager')
                                       ],
                                     ),
-                                    SizedBox(
-                                      height: 22,
-                                    ),
+                                    SizedBox(height: 22),
                                     Divider(),
                                     Text('Choose the service you want'),
-                                    SizedBox(
-                                      height: 12,
-                                    ),
+                                    SizedBox(height: 12),
                                     Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceAround,
@@ -178,26 +168,20 @@ class Home extends StatelessWidget {
                                         Column(
                                           children: [
                                             SvgPicture.asset('assets/ridesBig.svg'),
-                                            SizedBox(
-                                              height: 12,
-                                            ),
+                                            SizedBox(height: 12),
                                             Text('Rides')
                                           ],
                                         ),
                                         Column(
                                           children: [
                                             SvgPicture.asset('assets/foodsBig.svg'),
-                                            SizedBox(
-                                              height: 12,
-                                            ),
+                                            SizedBox(height: 12),
                                             Text('Foods')
                                           ],
                                         )
                                       ],
                                     ),
-                                    SizedBox(
-                                      height: 24,
-                                    )
+                                    SizedBox(height: 24)
                                   ],
                                 ),
                               ),
@@ -206,9 +190,7 @@ class Home extends StatelessWidget {
                                 child: Row(
                                   children: [
                                     SvgPicture.asset('assets/discount.svg'),
-                                    SizedBox(
-                                      width: 8,
-                                    ),
+                                    SizedBox(width: 8),
                                     Text(
                                       'Discount up to 20%! Order Now!',
                                       style: TextStyle(color: Colors.white),
